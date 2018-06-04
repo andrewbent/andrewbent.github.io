@@ -21,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "andrewbent.github.io", "and
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "50614"
+		SlnRelativePath = "andrewbent.github.io\"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
