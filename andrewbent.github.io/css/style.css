@@ -1,0 +1,42 @@
+﻿.sidebar{
+    padding: 7% 7% 7% 7%;
+}
+
+.heading{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2em;
+}
+
+.link{
+    font-family: 'PT Serif', serif;
+    font-size: 1em;
+}
+
+#resize{
+    max-height: 100vh;
+    padding: 10% 10% 10% 10%;
+    top: 50%;
+    bottom: 50%;
+}
+
+.forward{
+    top: 50%;
+    bottom: 50%;
+    transform: rotate(-90deg);
+    width: 40px;
+}
+
+.back{
+    top: 50%;
+    bottom: 50%;
+    transform: rotate(90deg);
+    width: 40px;
+}
+
+.back:hover{
+    cursor: pointer;
+}
+
+.forward:hover{
+    cursor: pointer;
+}
