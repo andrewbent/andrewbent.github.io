@@ -3,12 +3,18 @@
 }
 
 .mainbar{
-    padding: 10% 7% 7% 7%;
+    padding: 5% 7% 7% 7%;
 }
 
 .heading{
     font-family: 'PT Sans', sans-serif;
     font-size: 2em;
+}
+
+.biggerHeading {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 3em;
+    margin-bottom: 2%;
 }
 
 .link{
@@ -43,10 +49,12 @@
     text-align: center;
 }
 .back:hover{
+    opacity: 0.34;
     cursor: pointer;
 }
 
 .forward:hover{
+    opacity: 0.34;
     cursor: pointer;
 }
 
