@@ -13,7 +13,7 @@
     <div id="container">
         <div class="container">
             <div class="row">
-                <div class="sidebar col-lg-4">
+                <div class="sidebar col-lg-3">
                     <div class="heading row">ANDREW BENNETT</div>
                     <div class="link row">footography</div>
                     <div class="link row">portraits</div>
@@ -21,10 +21,13 @@
                     <div class="link row">software</div>
                     <div class="link row">coding</div>
                 </div>
-                <div class="col-lg-8">
-                    <img v-if="!firstPage" class="back" src="Images/aro.png" v-on:click="decPage()"/>
-                    <img v-bind:src="'Images/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
-                    <img v-if="!finalPage" class="forward" src="Images/aro.png" v-on:click="incPage()"/>
+                <div class="mainbar col-lg-9 tac">
+                    <div class="row dayinfo">day {{curPage}} : {{con[curPage]}}</div>
+                    <div class="row">
+                        <img v-if="!firstPage" class="back" src="Images/aro.png" v-on:click="decPage()" />
+                        <img v-bind:src="'Images/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
+                        <img v-if="!finalPage" class="forward" src="Images/aro.png" v-on:click="incPage()" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,7 +39,8 @@
     var app = new Vue({
         el: "#container",
         data: {
-            curPage: 0,
+            con: ["", "me", "myspace", "framing", "vip", "thirds", "free", "kiss", "silhouette", "foot", "safety", "cold", "tgif", "yearbook", "fork", "stop it", "foot", "shallow depth of field", "hate", "love", "texture", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "upset", "up north", "uppity", "upside down", "up and down", "up light", "up tight", "[t]adpole", "t[a]dpole", "ta[d]pole", "tad[p]ole", "tadp[o]le", "tadpo[l]e", "tadpol[e]", "red", "blue", "orange", "yellow", "green", "black", "white", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "foot"],
+            curPage: 1,
             finalPage: false,
             firstPage: true,
             displayAll: false,
@@ -55,9 +59,9 @@
 
                 this.curPage--;
                 this.finalPage = false;
-                if (this.curPage <= 0) {
+                if (this.curPage <= 1) {
                     this.firstPage = true;
-                    this.curPage = 0;
+                    this.curPage = 1;
                 }
             },
             correct: function () {
@@ -70,12 +74,12 @@
                     this.curPage = 57;
                     this.finalPage = true;
                 }
-                if (this.curPage <= 0) {
-                    this.curPage = 0;
+                if (this.curPage <= 1) {
+                    this.curPage = 1;
                     this.firstPage = true;
                 }
 
-                if (this.curPage != 0) {
+                if (this.curPage != 1) {
                     this.firstPage = false;
                 }
 
