@@ -1,11 +1,308 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Andrew Bent</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface|Abel|ABeeZee|Alfa+Slab+One|Open+Sans|Montserrat:300,700|Fjalla+One|Average|Istok+Web|Lora|Lato|Merriweather:300|Cardo|Domine|Neuton|Muli|Playfair+Display:700|Gentium+Book+Basic|Oswald:300|Quattrocento|PT+Sans|PT+Serif|Raleway:700|Ubuntu|Bitter|Bree+Serif|Cantata+One|Imprima|Crete+Round|Lustria|Old+Standard+TT|Questrial|Ovo|Muli|Quattrocento+Sans|Roboto|Roboto+Slab|Rufina|Rokkitt|Sintony|Vollkorn|Exo|Dosis|Cantarell|Oxygen|Source+Sans+Pro|Philosopher|Cabin|Amatic+SC|Andika|Josefin+Sans|Bevan|Pontano+Sans|Flamenco|Asap|Lobster|Arimo|Medula+One|Pacifico|Patua+One|Rancho|Gudea|Shadows+Into+Light|Squada+One|Allerta|Stint+Ultra+Expanded|Clicker+Script|EB+Garamond|Dancing+Script|Nixie+One|Ledger|Libre+Baskerville|Sacramento|Alice|Sansita+One|Kameron|Unica+One|Fauna+One|Quando|Judson|Fanwood+Text|Ultra|Slabo+13px|Nunito|Hind|Open+Sans+Condensed|Droid+Sans|Didact+Gothic|Alegreya|Francois+One|Inconsolata|Walter+Turncoat|Amaranth|Titillium+Web|Kreon|Josefin+Slab|Yeseva+One|Quicksand:700|Cutive+Mono|Crimson+Text|Playfair+Display+SC|Londrina+Solid|Signika:700|Maven+Pro|Proza+Libre|Libre+Franklin|Work+Sans|Cormorant+Garamond|Proza+Libre|Rubik|Trirong|Taviraj|Gentium+Basic|Space+Mono|Fira+Sans|Alegreya+Sans|Merriweather+Sans|Nunito+Sans:300,700|Source+Serif+Pro|Spectral|Poppins|BioRhyme|Archivo+Narrow|Karla|Anonymous+Pro' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+    <div id="container">
+        <div v-if="tableView" class="container">
+            <div class="row">
+                <div class="sidebar col-lg-3">
+                    <div class="heading row">ANDREW BENNETT</div>
+                    <div class="link row"><a href="index.html">footography</a></div>
+                    <div class="link row"><a href="portraits.html">portraits</a></div>
+                    <div class="link row"><a href="doepke.html">doepke</a></div>
+                    <div class="link row"><a href="design.html">design</a></div>
+                </div>
+                <div class="col-lg-9 tac mainbar">
+                    <div class="biggerHeading">57 DAY PHOTOS</div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/1.jpg" v-on:click="goToImage(1)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/2.jpg" v-on:click="goToImage(2)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/3.jpg" v-on:click="goToImage(3)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/4.jpg" v-on:click="goToImage(4)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/5.jpg" v-on:click="goToImage(5)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/6.jpg" v-on:click="goToImage(6)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/7.jpg" v-on:click="goToImage(7)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/8.jpg" v-on:click="goToImage(8)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/9.jpg" v-on:click="goToImage(9)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/10.jpg" v-on:click="goToImage(10)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/11.jpg" v-on:click="goToImage(11)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/12.jpg" v-on:click="goToImage(12)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/13.jpg" v-on:click="goToImage(13)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/14.jpg" v-on:click="goToImage(14)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/15.jpg" v-on:click="goToImage(15)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/16.jpg" v-on:click="goToImage(16)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/17.jpg" v-on:click="goToImage(17)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/18.jpg" v-on:click="goToImage(18)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/19.jpg" v-on:click="goToImage(19)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/20.jpg" v-on:click="goToImage(20)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/21.jpg" v-on:click="goToImage(21)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/22.jpg" v-on:click="goToImage(22)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/23.jpg" v-on:click="goToImage(23)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/24.jpg" v-on:click="goToImage(24)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/25.jpg" v-on:click="goToImage(25)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/26.jpg" v-on:click="goToImage(26)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/27.jpg" v-on:click="goToImage(27)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/28.jpg" v-on:click="goToImage(28)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/29.jpg" v-on:click="goToImage(29)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/30.jpg" v-on:click="goToImage(30)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/31.jpg" v-on:click="goToImage(31)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/32.jpg" v-on:click="goToImage(32)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/33.jpg" v-on:click="goToImage(33)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/34.jpg" v-on:click="goToImage(34)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/35.jpg" v-on:click="goToImage(35)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/36.jpg" v-on:click="goToImage(36)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/37.jpg" v-on:click="goToImage(37)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/38.jpg" v-on:click="goToImage(38)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/39.jpg" v-on:click="goToImage(39)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/40.jpg" v-on:click="goToImage(40)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/41.jpg" v-on:click="goToImage(41)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/42.jpg" v-on:click="goToImage(42)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/43.jpg" v-on:click="goToImage(43)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/44.jpg" v-on:click="goToImage(44)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/45.jpg" v-on:click="goToImage(45)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/46.jpg" v-on:click="goToImage(46)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/47.jpg" v-on:click="goToImage(47)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/48.jpg" v-on:click="goToImage(48)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/49.jpg" v-on:click="goToImage(49)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/51.jpg" v-on:click="goToImage(51)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/52.jpg" v-on:click="goToImage(52)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/53.jpg" v-on:click="goToImage(53)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/54.jpg" v-on:click="goToImage(54)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/55.jpg" v-on:click="goToImage(55)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/56.jpg" v-on:click="goToImage(56)" />
+                        </div>
+                        <div class="col-lg-3">
+                            <img class="tableImage imageHover tablePadding" src="Images/57.jpg" v-on:click="goToImage(57)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-if="!tableView" class="container">
+            <div class="row">
+                <div class="sidebar col-lg-3">
+                    <div class="heading row">ANDREW BENNETT</div>
+                    <div class="link row"><a href="index.html">footography</a></div>
+                    <div class="link row"><a href="portraits.html">portraits</a></div>
+                    <div class="link row"><a href="doepke.html">doepke</a></div>
+                    <div class="link row"><a href="design.html">design</a></div>
+                </div>
+                <div class="mainbar col-lg-9 tac">
+                    <div class="biggerHeading">57 DAY PHOTOS</div>
+                    <div class="row link linkPadding"><a v-on:click="backToTable()">back to table</a></div>
+                    <div class="row dayinfo">day {{curPage}} : {{con[curPage]}}</div>
+                    <div class="row">
+                        <img v-if="!firstPage" class="back" src="Images/aro.jpg" v-on:click="decPage()" /><img v-if="firstPage" class="back" src="Images/aro.jpg" style="opacity: 0;" />
+                        <img v-bind:src="'Images/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
+                        <img v-if="!finalPage" class="forward" src="Images/aro.jpg" v-on:click="incPage()" /><img v-if="finalPage" class="forward" src="Images/aro.jpg" style="opacity: 0;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#container",
+        data: {
+            con: ["", "me", "myspace", "framing", "vip", "thirds", "free", "kiss", "silhouette", "foot", "safety", "cold", "tgif", "yearbook", "fork", "stop it", "foot", "shallow depth of field", "hate", "love", "texture", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "upset", "up north", "uppity", "upside down", "up and down", "up light", "up tight", "[t]adpole", "t[a]dpole", "ta[d]pole", "tad[p]ole", "tadp[o]le", "tadpo[l]e", "tadpol[e]", "red", "blue", "orange", "yellow", "green", "black", "white", "foot", "foot", "foot", "foot", "foot", "foot", "foot", "foot"],
+            curPage: 1,
+            tableView: true,
+            finalPage: false,
+            firstPage: true,
+            displayAll: false,
+        },
+        methods: {
+            incPage: function () {
+
+                this.curPage++;
+                this.firstPage = false;
+                if (this.curPage >= 57) {
+                    this.finalPage = true;
+                    this.curPage = 57;
+                }
+            },
+            decPage: function () {
+
+                this.curPage--;
+                this.finalPage = false;
+                if (this.curPage <= 1) {
+                    this.firstPage = true;
+                    this.curPage = 1;
+                }
+            },
+            goToImage: function (value) {
+
+                this.tableView = false;
+                this.curPage = value;
+                this.correct();
+            },
+            correct: function () {
+                if (this.curPage >= 57) {
+                    this.curPage = 57;
+                    this.finalPage = true;
+                }
+                if (this.curPage <= 1) {
+                    this.curPage = 1;
+                    this.firstPage = true;
+                }
+
+                if (this.curPage != 1) {
+                    this.firstPage = false;
+                }
+
+                if (this.curPage != 57) {
+                    this.finalPage = false;
+                }
+            },
+            backToTable: function () {
+                this.tableView = true;
+            },
+        }
+    })
+</script>
