@@ -16,18 +16,18 @@
                 <div class="sidebar col-lg-3">
                     <div class="heading row">ANDREW BENNETT</div>
                     <div class="link row"><a href="index.html">footography</a></div>
-                    <div class="link row">portraits</div>
-                    <div class="link row">design</div>
+                    <div class="link row"><a href="portraits.html">portraits</a></div>
+                    <div class="link row"><a href="design.html">design</a></div>
                     <div class="link row">software</div>
                     <div class="link row">coding</div>
                 </div>
                 <div class="mainbar col-lg-9 tac">
-                    <div class="biggerHeading">PORTRAITS</div>
-                    <div class="row dayinfo">day {{curPage}} : {{con[curPage]}}</div>
+                    <div class="biggerHeading">RETOUCHED PORTRAITS</div>
+                    <div class="row dayinfo">{{con[curPage%2]}}</div>
                     <div class="row">
-                        <img v-if="!firstPage" class="back" src="Images/aro.png" v-on:click="decPage()" />
-                        <img v-bind:src="'Images/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
-                        <img v-if="!finalPage" class="forward" src="Images/aro.png" v-on:click="incPage()" />
+                        <img v-if="!firstPage" class="back" src="Images/aro.jpg" v-on:click="decPage()" /><img v-if="firstPage" class="back" src="Images/aro.jpg" style="opacity: 0;"/>
+                        <img v-bind:src="'Portraits/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
+                        <img v-if="!finalPage" class="forward" src="Images/aro.jpg" v-on:click="incPage()" /><img v-if="finalPage" class="forward" src="Images/aro.jpg" style="opacity: 0;"/>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
     var app = new Vue({
         el: "#container",
         data: {
-            con: [],
-            curPage: 1,
+            con: ["before", "after"],
+            curPage: 0,
             finalPage: false,
             firstPage: true,
             displayAll: false,
@@ -51,40 +51,35 @@
 
                 this.curPage++;
                 this.firstPage = false;
-                if (this.curPage >= 57) {
+                if (this.curPage >= 11) {
                     this.finalPage = true;
-                    this.curPage = 57;
+                    this.curPage = 11;
                 }
             },
             decPage: function () {
 
                 this.curPage--;
                 this.finalPage = false;
-                if (this.curPage <= 1) {
+                if (this.curPage <= 0) {
                     this.firstPage = true;
-                    this.curPage = 1;
+                    this.curPage = 0;
                 }
             },
             correct: function () {
-                if (this.curPage.length > 1 && this.curPage.charAt(0) == '0') {
-                    this.curPage = this.curPage.charAt(1);
-                }
-                document.getElementById("resize").style.display = "block";
-                document.getElementById("resize").style.textAlign = "center";
-                if (this.curPage >= 57) {
-                    this.curPage = 57;
+                if (this.curPage >= 11) {
+                    this.curPage = 11;
                     this.finalPage = true;
                 }
-                if (this.curPage <= 1) {
-                    this.curPage = 1;
+                if (this.curPage <= 0) {
+                    this.curPage = 0;
                     this.firstPage = true;
                 }
 
-                if (this.curPage != 1) {
+                if (this.curPage != 0) {
                     this.firstPage = false;
                 }
 
-                if (this.curPage != 57) {
+                if (this.curPage != 11) {
                     this.finalPage = false;
                 }
             }

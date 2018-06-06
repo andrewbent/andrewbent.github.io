@@ -237,9 +237,9 @@
                     <div class="row link linkPadding"><a v-on:click="backToTable()">back to table</a></div>
                     <div class="row dayinfo">day {{curPage}} : {{con[curPage]}}</div>
                     <div class="row">
-                        <img v-if="!firstPage" class="back" src="Images/aro.png" v-on:click="decPage()" />
+                        <img v-if="!firstPage" class="back" src="Images/aro.jpg" v-on:click="decPage()" /><img v-if="firstPage" class="back" src="Images/aro.jpg" style="opacity: 0;" />
                         <img v-bind:src="'Images/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
-                        <img v-if="!finalPage" class="forward" src="Images/aro.png" v-on:click="incPage()" />
+                        <img v-if="!finalPage" class="forward" src="Images/aro.jpg" v-on:click="incPage()" /><img v-if="finalPage" class="forward" src="Images/aro.jpg" style="opacity: 0;" />
                     </div>
                 </div>
             </div>
