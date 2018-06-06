@@ -22,6 +22,17 @@
     font-size: 1em;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+    a.hover {
+        text-decoration: none;
+        color: black;
+    }
+
 #resize{
     max-height: 69vh;
     max-width: 82%;
@@ -65,5 +76,29 @@
 
 .dayinfo {
     font-family: "PT Serif", serif;
+    margin-bottom: 2%;
+}
+
+
+.imageHover {
+    height: auto;
+    transform: scale(1.0);
+    transition: transform 0.1s;
+    z-index: 0;
+}
+
+    .imageHover:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        z-index: -5;
+    }
+
+.tableImage {
+    height: 120px;
+}
+.tablePadding {
+    margin-top: 8%;
+}
+.linkPadding {
     margin-bottom: 2%;
 }
