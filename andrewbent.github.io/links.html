@@ -22,12 +22,26 @@
                     <div class="link row"><a href="links.html">links</a></div>
                 </div>
                 <div class="mainbar col-lg-9 tac">
-                    <div class="biggerHeading">RETOUCHED PORTRAITS</div>
-                    <div class="row dayinfo">{{con[curPage%2]}}</div>
+                    <div class="biggerHeading">LINKS</div>
                     <div class="row">
-                        <img v-if="!firstPage" class="back" src="Images/aro.jpg" v-on:click="decPage()" /><img v-if="firstPage" class="back" src="Images/aro.jpg" style="opacity: 0;"/>
-                        <img v-bind:src="'Portraits/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
-                        <img v-if="!finalPage" class="forward" src="Images/aro.jpg" v-on:click="incPage()" /><img v-if="finalPage" class="forward" src="Images/aro.jpg" style="opacity: 0;"/>
+                        <div class="heading linkPadding">proof</div>
+                        <div class="dayinfo linkPadding"><a href="https://www.youtube.com/watch?v=VrfbVXO_a2Q">video</a></div>
+                    </div>
+
+                    <div class="row tablePadding">
+                        <div class="heading linkPadding">github</div>
+                        <div class="dayinfo linkPadding"><a href="https://github.com/18bennea">code</a></div>
+                    </div>
+
+                    <div class="row tablePadding">
+                        <div class="heading linkPadding">soham's wacky journey</div>
+                        <div class="dayinfo"><a href="https://sohamswackyjourney.github.io/">website</a></div>
+                        
+                    </div>
+
+                    <div class="row tablePadding">
+                        <div class="heading linkPadding">email</div>
+                        <div class="dayinfo">hotnakedbeefcakes@gmail.com</div>
                     </div>
                 </div>
             </div>
@@ -35,54 +49,3 @@
     </div>
 </body>
 </html>
-<script src="js/vue.js"></script>
-<script>
-    var app = new Vue({
-        el: "#container",
-        data: {
-            con: ["before", "after"],
-            curPage: 0,
-            finalPage: false,
-            firstPage: true,
-            displayAll: false,
-        },
-        methods: {
-            incPage: function () {
-
-                this.curPage++;
-                this.firstPage = false;
-                if (this.curPage >= 11) {
-                    this.finalPage = true;
-                    this.curPage = 11;
-                }
-            },
-            decPage: function () {
-
-                this.curPage--;
-                this.finalPage = false;
-                if (this.curPage <= 0) {
-                    this.firstPage = true;
-                    this.curPage = 0;
-                }
-            },
-            correct: function () {
-                if (this.curPage >= 11) {
-                    this.curPage = 11;
-                    this.finalPage = true;
-                }
-                if (this.curPage <= 0) {
-                    this.curPage = 0;
-                    this.firstPage = true;
-                }
-
-                if (this.curPage != 0) {
-                    this.firstPage = false;
-                }
-
-                if (this.curPage != 11) {
-                    this.finalPage = false;
-                }
-            }
-        }
-    })
-</script>
