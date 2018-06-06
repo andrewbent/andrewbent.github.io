@@ -40,6 +40,18 @@ a {
     bottom: 50%;
 }
 
+#bigsize {
+    height: 69vh;
+    top: 50%;
+    bottom:50%;
+}
+
+#bigsize2{
+    height: 50vh;
+    top: 50%;
+    bottom: 50%;
+}
+
 .forward{
     top: 50%;
     bottom: 50%;

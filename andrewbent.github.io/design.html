@@ -21,12 +21,48 @@
                     <div class="link row"><a href="design.html">design</a></div>
                 </div>
                 <div class="mainbar col-lg-9 tac">
-                    <div class="biggerHeading">RETOUCHED PORTRAITS</div>
-                    <div class="row dayinfo">{{con[curPage%2]}}</div>
+                    <div class="biggerHeading">DESIGN</div>
                     <div class="row">
-                        <img v-if="!firstPage" class="back" src="Images/aro.jpg" v-on:click="decPage()" /><img v-if="firstPage" class="back" src="Images/aro.jpg" style="opacity: 0;"/>
-                        <img v-bind:src="'Portraits/' + curPage + '.jpg'" id="resize" v-on:click="incPage()" />
-                        <img v-if="!finalPage" class="forward" src="Images/aro.jpg" v-on:click="incPage()" /><img v-if="finalPage" class="forward" src="Images/aro.jpg" style="opacity: 0;"/>
+                        <div class="heading linkPadding">society</div>
+                        <div class="dayinfo linkPadding">dye-sublimation, heat-pressed phone case</div>
+                        <div class="col-lg-6">
+                            <img id="bigsize" src="Design/0.jpg" />
+                        </div>
+                        <div class="col-lg-6">
+                            <img id="bigsize" src="Design/1.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="row tablePadding">
+                        <div class="heading linkPadding">cat fancy</div>
+                        <div class="dayinfo linkPadding">magazine layout</div>
+                        <div class="tac">
+                            <img id="bigsize" src="Design/2.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="row tablePadding">
+                        <div class="heading linkPadding">danderson</div>
+                        <div class="dayinfo">dye-sublimation, heat-pressed towel</div>
+                        <div class="linkPadding"></div>
+                        <div class="col-lg-6">
+                            <img id="bigsize" src="Design/4.jpg" />
+                        </div>
+                        <div class="col-lg-6">
+                            <img id="bigsize" src="Design/3.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="row tablePadding">
+                        <div class="heading linkPadding">marth fair</div>
+                        <div class="dayinfo">vinyl sticker</div>
+                        <div class="linkPadding"></div>
+                        <div class="col-lg-6">
+                            <img id="bigsize2" class="tablePadding" src="Design/5.jpg" />
+                        </div>
+                        <div class="col-lg-6">
+                            <img id="bigsize" src="Design/6.jpg" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,54 +70,3 @@
     </div>
 </body>
 </html>
-<script src="js/vue.js"></script>
-<script>
-    var app = new Vue({
-        el: "#container",
-        data: {
-            con: ["before", "after"],
-            curPage: 0,
-            finalPage: false,
-            firstPage: true,
-            displayAll: false,
-        },
-        methods: {
-            incPage: function () {
-
-                this.curPage++;
-                this.firstPage = false;
-                if (this.curPage >= 11) {
-                    this.finalPage = true;
-                    this.curPage = 11;
-                }
-            },
-            decPage: function () {
-
-                this.curPage--;
-                this.finalPage = false;
-                if (this.curPage <= 0) {
-                    this.firstPage = true;
-                    this.curPage = 0;
-                }
-            },
-            correct: function () {
-                if (this.curPage >= 11) {
-                    this.curPage = 11;
-                    this.finalPage = true;
-                }
-                if (this.curPage <= 0) {
-                    this.curPage = 0;
-                    this.firstPage = true;
-                }
-
-                if (this.curPage != 0) {
-                    this.firstPage = false;
-                }
-
-                if (this.curPage != 11) {
-                    this.finalPage = false;
-                }
-            }
-        }
-    })
-</script>
