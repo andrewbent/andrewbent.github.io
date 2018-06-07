@@ -1,12 +1,12 @@
-﻿.sidebar{
+﻿.sidebar {
     padding: 7% 0% 7% 7%;
 }
 
-.mainbar{
+.mainbar {
     padding: 5% 7% 7% 7%;
 }
 
-.heading{
+.heading {
     font-family: 'PT Sans', sans-serif;
     font-size: 2em;
 }
@@ -17,7 +17,7 @@
     margin-bottom: 2%;
 }
 
-.link{
+.link {
     font-family: 'PT Serif', serif;
     font-size: 1em;
 }
@@ -33,7 +33,7 @@ a {
         color: black;
     }
 
-#resize{
+#resize {
     max-height: 69vh;
     max-width: 82%;
     top: 50%;
@@ -43,16 +43,16 @@ a {
 #bigsize {
     height: 69vh;
     top: 50%;
-    bottom:50%;
+    bottom: 50%;
 }
 
-#bigsize2{
+#bigsize2 {
     height: 50vh;
     top: 50%;
     bottom: 50%;
 }
 
-.forward{
+.forward {
     top: 50%;
     bottom: 50%;
     transform: rotate(-90deg);
@@ -60,7 +60,7 @@ a {
     opacity: 0.2;
 }
 
-.back{
+.back {
     top: 50%;
     bottom: 50%;
     transform: rotate(90deg);
@@ -68,20 +68,21 @@ a {
     opacity: 0.2;
 }
 
-.tac{
+.tac {
     text-align: center;
 }
-.back:hover{
+
+.back:hover {
     opacity: 0.34;
     cursor: pointer;
 }
 
-.forward:hover{
+.forward:hover {
     opacity: 0.34;
     cursor: pointer;
 }
 
-.badding{
+.badding {
     margin-top: -3%;
     padding-bottom: 4%;
 }
@@ -108,13 +109,37 @@ a {
 .tableImage {
     height: 120px;
 }
+
 .tablePadding {
     margin-top: 8%;
 }
+
 .linkPadding {
     margin-bottom: 2%;
 }
 
-.linkListPadding{
-    margin-top: 4%;
+.linkListPadding {
+    margin-top: 3%;
+}
+
+#idbutton {
+    padding-left: 50%;
+    padding-right: 50%;
+}
+
+.moneyhead {
+    padding: 4% 4% 4% 4%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 5em;
+}
+
+.moneyline {
+}
+
+.moneybody {
+    font-family: "Crimson Text", serif;
+}
+
+.roomForJesus {
+    margin-top: 2%;
 }
