@@ -118,3 +118,26 @@ a {
 .linkListPadding{
     margin-top: 3%;
 }
+
+#idbutton{
+    padding-left:50%;
+    padding-right:50%;
+}
+
+.moneyhead {
+    padding: 4% 4% 4% 4%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 5em;
+}
+
+.moneyline {
+
+}
+
+.moneybody {
+    font-family: "Crimson Text", serif;
+}
+
+.roomForJesus{
+    margin-top: 2%;
+}

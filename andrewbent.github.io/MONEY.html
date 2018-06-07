@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reclaim Your Voice</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Abril+Fatface|Abel|ABeeZee|Alfa+Slab+One|Open+Sans|Montserrat:300,700|Fjalla+One|Average|Istok+Web|Lora|Lato|Merriweather:300|Cardo|Domine|Neuton|Muli|Playfair+Display:700|Gentium+Book+Basic|Oswald:300|Quattrocento|PT+Sans|PT+Serif|Raleway:700|Ubuntu|Bitter|Bree+Serif|Cantata+One|Imprima|Crete+Round|Lustria|Old+Standard+TT|Questrial|Ovo|Muli|Quattrocento+Sans|Roboto|Roboto+Slab|Rufina|Rokkitt|Sintony|Vollkorn|Exo|Dosis|Cantarell|Oxygen|Source+Sans+Pro|Philosopher|Cabin|Amatic+SC|Andika|Josefin+Sans|Bevan|Pontano+Sans|Flamenco|Asap|Lobster|Arimo|Medula+One|Pacifico|Patua+One|Rancho|Gudea|Shadows+Into+Light|Squada+One|Allerta|Stint+Ultra+Expanded|Clicker+Script|EB+Garamond|Dancing+Script|Nixie+One|Ledger|Libre+Baskerville|Sacramento|Alice|Sansita+One|Kameron|Unica+One|Fauna+One|Quando|Judson|Fanwood+Text|Ultra|Slabo+13px|Nunito|Hind|Open+Sans+Condensed|Droid+Sans|Didact+Gothic|Alegreya|Francois+One|Inconsolata|Walter+Turncoat|Amaranth|Titillium+Web|Kreon|Josefin+Slab|Yeseva+One|Quicksand:700|Cutive+Mono|Crimson+Text|Playfair+Display+SC|Londrina+Solid|Signika:700|Maven+Pro|Proza+Libre|Libre+Franklin|Work+Sans|Cormorant+Garamond|Proza+Libre|Rubik|Trirong|Taviraj|Gentium+Basic|Space+Mono|Fira+Sans|Alegreya+Sans|Merriweather+Sans|Nunito+Sans:300,700|Source+Serif+Pro|Spectral|Poppins|BioRhyme|Archivo+Narrow|Karla|Anonymous+Pro' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="container">
+        <div class="container tac">
+            <div class="row moneyhead"><div class="moneyline">EMAIL YOUR REPRESENTATIVES</div></div>
+            <div class="row moneybody roomForJesus">Enter your name and copy the template to email to your representatives</div>
+            <div class="row roomForJesus"><input type="text" v-model="name" placeholder="Your Name" class="moneybody tac" /></div>
+            <div class="row">
+                <textarea id="template" style="display: none;">
+    Dear senators and representatives,
+
+    Please support any law that will help regulate the outflow of money from 501(c)(3)s and (c)(4)s. Interest groups and powerful individuals have far too much influence as they currently are, and by regulating outflow we can effectively cap their influence without limiting actual nonprofits’ ability to function by stopping them from receiving funds. By providing a maximum limit for 501(c)s influence, we can make the United States’ government more representative of its people. Please help us reclaim our voice!
+
+    Thank you,
+    {{name}}
+</textarea>
+                <div class="row">
+                    <button v-if="name.length > 0" v-on:click="copyToClipboard" class="moneybody roomForJesus">Copy Email To Clipboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#container",
+        data: {
+            name: "",
+        },
+        methods: {
+            copyToClipboard: function(){
+                /* Get the text field */
+                document.getElementById("template").style.display = "block";
+                var copyText = document.getElementById("template").select();
+
+
+                /* Copy the text inside the text field */
+                document.execCommand("copy");
+                document.getElementById("template").style.display = "none";
+                /* Alert the copied text */
+                alert("Copied the email to clipboard");
+            },
+        }
+    })
+</script>
