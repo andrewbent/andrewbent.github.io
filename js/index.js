@@ -6,6 +6,7 @@ var app = new Vue({
     },
     methods: {
         generateNames: function(){
+          this.namelist = [];
           for(var i = 0; i < this.names; i++){
             this.namelist.push(this.randomname());
           }
